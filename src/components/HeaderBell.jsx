@@ -1,13 +1,19 @@
 import React from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation"; // Importa useRouter
 
 export default function HeaderBell() {
+  const router = useRouter(); // Inicializa el router
+
   return (
     <>
       {/* Título de la página e iconos */}
-      <div className="flex items-center justify-between mb-6  ">
+      <div className="flex items-center justify-between mb-6">
         {/* Flecha de retroceso (izquierda) */}
-        <button className="flex-shrink-0">
+        <button
+          className="flex-shrink-0"
+          onClick={() => router.push("/")} // Navega a page.tsx (ruta raíz)
+        >
           <Image
             src="/images/backArrow.png"
             alt="Back"

@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import { useRouter } from "next/navigation"; // Importamos useRouter
+import { useRouter } from "next/navigation";
 
 const OrderCard = ({ order }) => {
-  const router = useRouter(); // Inicializamos el router
+  const router = useRouter();
 
   const statusClasses = {
     Assigned: "text-[#EDEDED]",
@@ -159,7 +159,7 @@ const OrderCard = ({ order }) => {
         </div>
 
         {/* Botones en la parte inferior */}
-        {order.status === "Assigned" ? (
+        {order.status === "In transit" ? (
           <div className="flex justify-between mt-6">
             <button
               onClick={handlePickupClick} // Manejador de clic añadido
