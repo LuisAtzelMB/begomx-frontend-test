@@ -2,7 +2,6 @@
 import { useState, useEffect } from "react";
 import OrderCard from "../components/OrderCard";
 import HeaderBell from "../components/HeaderBell";
-import Image from "next/image";
 
 // Definición de tipos para TypeScript
 type Destination = {
