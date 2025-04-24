@@ -163,7 +163,7 @@ export default function CargoDetails() {
 
     fetchOrderDetails();
   }, [order.id]);
-
+  console.log("Datos de la orden:", order);
   // Función para obtener la ciudad desde la dirección
   const getCityFromAddress = (address: string) => {
     if (!address) return "N/A";
@@ -216,11 +216,11 @@ export default function CargoDetails() {
         </div>
       ) : orderDetails ? (
         <>
-          <div className="border border-[#555555] rounded-[20px] p-6 font-sans">
+          <div className="border border-[#555555] rounded-[20px] p-6 font-sans gradient-gray">
             {/* Encabezado con referencia y número de orden */}
             <div className="mb-6 text-[#EDEDED]">
               <h2 className="text-[13.1px]">
-                Referencia: {orderDetails.reference_number}
+                Referencia: {orderDetails.reference_number || "Sin referencia"}
               </h2>
               <p className="text-[17.5px]">
                 Order #{orderDetails.order_number}
@@ -228,7 +228,7 @@ export default function CargoDetails() {
             </div>
 
             {/* Contenedor principal para las secciones con imágenes */}
-            <div className="flex">
+            <div className="flex ">
               {/* Columna de imágenes */}
               <div className="flex flex-col items-center mr-4 mt-4">
                 <img
@@ -251,7 +251,7 @@ export default function CargoDetails() {
               {/* Columna de contenido */}
               <div className="flex-1">
                 {/* Sección de PICKUP */}
-                <div className="mb-6">
+                <div className="mb-6 ">
                   <h3 className="text-[#4C4D4E] text-[11.2px]">PICKUP</h3>
                   <p className="text-[#EDEDED] text-[15.5px]">
                     {orderDetails.destinations?.[0]
@@ -316,10 +316,16 @@ export default function CargoDetails() {
           </div>
 
           {/* segundo div - info de repartidor */}
-          <div className="border border-[#555555] rounded-[20px] mt-4 font-sans">
+          <div className="border border-[#555555] rounded-[20px] mt-20 font-sans relative gradient-gray">
+            {/* Imagen flotante */}
+            <img
+              src="/images/repartidor.png"
+              alt="deliveryMan"
+              className="absolute top-[-13%] left-1/2 transform -translate-x-1/2 w-[90px] h-[89.25px]"
+            />
             {/* Encabezado con estado y hora */}
             <div className="flex text-[#EDEDED]">
-              <h2 className="text-[19.9px] text-center w-full my-8">
+              <h2 className="text-[19.9px] text-center w-full mb-8 mt-15">
                 {formatTime(order.delivery?.time || "12:00 p.m.")}
               </h2>
             </div>
@@ -383,15 +389,15 @@ export default function CargoDetails() {
 
             {/* Botón Track Order */}
             <div className="flex">
-              <button className="w-full h-[74px] bg-[#FFEE00] text-[#080C0F] py-3 rounded-b-[20px] mt-6 text-[20px]">
+              <button className="w-full h-[74px] bg-[#FFEE00] text-[#080C0F] py-3 rounded-b-[20px] mt-6 text-[20px] transition-transform transform active:scale-95 hover:bg-[#FFD700] focus:outline-none shadow-[inset_0px_-4px_6px_rgba(0,0,0,0.2)]">
                 Track Order
               </button>
             </div>
           </div>
 
           {/* Sección de Pickup Data */}
-          <div className="pt-4">
-            <button className="flex justify-between w-full items-center h-[64.17px] text-[#EDEDED] text-[15.3px] border border-[#555555] rounded-[20px] p-5 mb-7">
+          <div className="pt-4 ">
+            <button className="flex justify-between w-full items-center h-[64.17px] text-[#EDEDED] text-[15.3px] border border-[#555555] rounded-[20px] p-5 mb-7 gradient-gray">
               Pickup Data
               <img
                 src="/images/upArrow.png"

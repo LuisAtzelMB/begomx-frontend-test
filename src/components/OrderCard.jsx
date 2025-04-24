@@ -41,14 +41,9 @@ const OrderCard = ({ order }) => {
       </div>
 
       {/* Contenedor principal con grid */}
-      <div
-        className="border-[1.5px] border-[#848484] rounded-[20px]"
-        style={{
-          background: "linear-gradient(to bottom, #080C0F80, #55555500)",
-        }}
-      >
+      <div className=" border-[1.5px] border-[#848484] rounded-[20px]  gradient-gray">
         {/* Sección superior con badges */}
-        <div className="flex justify-between pt-4 px-4">
+        <div className="flex justify-between pt-4 px-4 ">
           <div className="flex items-center">
             {order.type === "FCL" ? (
               <img
@@ -88,7 +83,7 @@ const OrderCard = ({ order }) => {
         />
 
         {/* Grid principal */}
-        <div className="grid grid-cols-12 gap-4">
+        <div className="grid grid-cols-12 gap-4 ">
           {/* Columna izquierda - Imágenes */}
           <div className="col-span-2 flex flex-col items-center justify-between my-9 gap-3">
             <img
