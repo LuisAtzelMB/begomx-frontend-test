@@ -134,7 +134,7 @@ const OrdersPage = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8 max-w-4xl mt-[65px] ">
+    <div className="container mx-auto px-4 py-8 max-w-2xl mt-[65px] ">
       <div className="mx-[46px]">
         {/* Título de la página e iconos */}
         <div className="flex items-center justify-between mb-6  ">
@@ -149,7 +149,7 @@ const OrdersPage = () => {
           </button>
 
           {/* Título centrado (opcionalmente ajustable) */}
-          <h1 className="text-2xl font-bold text-[#EDEDED] mx-4 flex-grow text-center">
+          <h1 className="text-[20px] font-bold text-[#EDEDED] mx-4 flex-grow text-center">
             Cargo Orders
           </h1>
 
@@ -164,9 +164,9 @@ const OrdersPage = () => {
           </button>
         </div>
         {/* Pestañas de navegación */}
-        <div className="flex border-b mb-6 justify-between">
+        <div className="flex border-b mb-6 justify-between text-[20px] ">
           <button
-            className={`  ${
+            className={`text-[18px]  ${
               activeTab === "upcoming" ? "text-[#FFEE00]" : "text-[#EDEDED]"
             } relative text-left ${
               activeTab === "upcoming"
@@ -178,7 +178,7 @@ const OrdersPage = () => {
             Upcoming
           </button>
           <button
-            className={` ${
+            className={`text-[13px] ${
               activeTab === "completed" ? "text-[#FFEE00]" : "text-[#EDEDED]"
             } relative mx-auto ${
               activeTab === "completed"
@@ -190,7 +190,7 @@ const OrdersPage = () => {
             Completed
           </button>
           <button
-            className={`px-4 py-2 font-medium ${
+            className={`px-4 py-2 text-[18px] ${
               activeTab === "past" ? "text-[#FFEE00]" : "text-[#EDEDED]"
             } relative text-right ${
               activeTab === "past"
@@ -203,19 +203,19 @@ const OrdersPage = () => {
           </button>
         </div>
         {/* Barra de búsqueda */}
-        <div className="mb-6 relative">
+        <div className="mb-[70px] relative text-[#EDEDED]">
           <div
             className="flex items-center border-b border-[#2C2C2C]"
-            style={{ width: "430px", height: "50px" }}
+            style={{ height: "50px", top: "199px" }}
           >
             <img
               src="images/searchIcon.png"
               alt="Search icon"
-              className="h-5 w-5 ml-3" // Ajusta el tamaño del icono según necesites
+              className="h-5 w-5 ml-3"
             />
             <input
               type="text"
-              placeholder="Search orders..."
+              placeholder=""
               className="w-full px-4 py-2 focus:outline-none bg-transparent"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}

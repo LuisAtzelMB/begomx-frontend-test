@@ -2,10 +2,13 @@
 
 * {
   /* Avenir cuesta dinero, por lo que hice una alternativa gratuita lo mas parecida posible*/
-  background: #000;
+
   font-family: "Montserrat", sans-serif;
   font-weight: 650; /* Weight: 800 (Extra Bold) */
-  font-size: 20px; /* Size: 20px */
   line-height: 20px; /* Line height: 100% (20px * 1.0) */
   letter-spacing: 0; /* Letter spacing: 0% */
+}
+
+body {
+  background: #000;
 }
