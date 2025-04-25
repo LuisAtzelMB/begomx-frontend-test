@@ -139,13 +139,13 @@ const OrdersPage = () => {
         {/* header */}
         <HeaderBell />
         {/* Pestañas de navegación */}
-        <div className="flex border-b mb-6 justify-between text-[20px] ">
+        <div className="flex border-b mb-6 justify-between text-[20px]">
           <button
-            className={`text-[13px]  ${
+            className={`text-[13px] sm:text-[24px] ${
               activeTab === "upcoming" ? "text-[#FFEE00]" : "text-[#EDEDED]"
             } relative text-left ${
               activeTab === "upcoming"
-                ? "after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-[24.45px] after:h-[2px] after:bg-[#FFEE00]"
+                ? "after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-1/5 after:h-[2px] after:bg-[#FFEE00]"
                 : ""
             }`}
             onClick={() => setActiveTab("upcoming")}
@@ -153,7 +153,7 @@ const OrdersPage = () => {
             Upcoming
           </button>
           <button
-            className={`text-[13px] ${
+            className={`text-[13px] sm:text-[24px] ${
               activeTab === "completed" ? "text-[#FFEE00]" : "text-[#EDEDED]"
             } relative mx-auto ${
               activeTab === "completed"
@@ -165,7 +165,7 @@ const OrdersPage = () => {
             Completed
           </button>
           <button
-            className={`pr-4 py-2 text-[13px] ${
+            className={`pr-4 py-2 text-[13px] sm:text-[24px] ${
               activeTab === "past" ? "text-[#FFEE00]" : "text-[#EDEDED]"
             } relative text-right ${
               activeTab === "past"

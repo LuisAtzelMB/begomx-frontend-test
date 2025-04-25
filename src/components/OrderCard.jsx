@@ -20,7 +20,7 @@ const OrderCard = ({ order }) => {
 
   const btn = (
     <button
-      className="w-4/10 bg-[#FFEE00] hover:bg-[#A89E00] active:bg-[#FFD700] text-[#080B11] text-[10px] mb-0 flex items-center  py-2 rounded-[20px] rounded-tr-none h-[40px] justify-center gap-2"
+      className="w-4/10 bg-[#FFEE00] hover:bg-[#A89E00] active:bg-[#FFD700] text-[#080B11] text-[10px] mb-0 flex items-center  py-2 rounded-[20px] rounded-tr-none h-[40px] justify-center  gap-2 sm:text-[18px]"
       style={{
         boxShadow: "inset 3px -3px 7px #080C0F80",
       }}
@@ -83,17 +83,17 @@ const OrderCard = ({ order }) => {
         />
 
         {/* Grid principal */}
-        <div className="grid grid-cols-12 gap-4 ">
+        <div className="grid grid-cols-8  pr-10">
           {/* Columna izquierda - Imágenes */}
           <div className="col-span-2 flex flex-col items-center justify-between my-9 gap-3">
             <img
               src="/images/deliveryTruck.png"
               alt="Delivery Truck"
-              className="h-5"
+              className="h-5 sm:h-7"
             />
-            <div className="vertical-line"></div>
+            <div className="vertical-line "></div>
 
-            <img src="/images/gps.png" alt="GPS" className="h-5" />
+            <img src="/images/gps.png" alt="GPS" className="h-5 sm:h-7" />
           </div>
 
           {/* Columna central - Información de ubicación */}
@@ -132,7 +132,7 @@ const OrderCard = ({ order }) => {
           </div>
 
           {/* Columna derecha - Fechas y horas */}
-          <div className="flex col-span-3 space-y-10 mt-9 pr-5 flex-col w-full">
+          <div className="flex  space-y-10 mt-9  flex-col w-full mr-0 ">
             <div>
               <p className="text-[12px] text-[#646666]">{order.pickup.date}</p>
               <p className="text-sm text-[#EDEDED] ml-6">
@@ -155,7 +155,7 @@ const OrderCard = ({ order }) => {
           <div className="flex justify-between mt-6 ">
             <button
               onClick={handlePickupClick} // Manejador de clic añadido
-              className="w-5/10 bg-[#FFEE00] hover:bg-[#A89E00] active:bg-[#FFD700] text-[#080B11] px-4 py-2 rounded-[20px] text-[10px] rounded-tl-none text-end"
+              className="w-5/10 bg-[#FFEE00] hover:bg-[#A89E00] active:bg-[#FFD700] text-[#080B11] px-4 py-2 rounded-[20px] text-[10px] sm:text-[18px] sm:text-center rounded-tl-none text-end"
               style={{
                 boxShadow: "inset -3px -3px 7px #080C0F80",
               }}

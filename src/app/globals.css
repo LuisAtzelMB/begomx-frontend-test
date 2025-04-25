@@ -23,3 +23,8 @@ body {
   background: linear-gradient(to bottom, #d9d9d9, transparent); /* Gradiente */
   margin: 0 auto; /* Centrar horizontalmente */
 }
+@media (min-width: 640px) {
+  .vertical-line {
+    height: 40px; /* Altura ajustada para pantallas mayores a 600px */
+  }
+}
