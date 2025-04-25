@@ -16,3 +16,10 @@ body {
 .gradient-gray {
   background: linear-gradient(135deg, #111111, #101010); /* Degradado gris */
 }
+
+.vertical-line {
+  width: 2px; /* Ancho inicial */
+  height: 100%; /* Altura completa */
+  background: linear-gradient(to bottom, #d9d9d9, transparent); /* Gradiente */
+  margin: 0 auto; /* Centrar horizontalmente */
+}

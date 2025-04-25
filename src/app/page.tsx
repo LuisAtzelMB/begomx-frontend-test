@@ -134,14 +134,14 @@ const OrdersPage = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8 max-w-2xl mt-[65px] ">
-      <div className="mx-[46px]">
+    <div className="container mx-auto px-0.5 py-8 max-w-2xl mt-[65px] ">
+      <div className="mx-[30px]">
         {/* header */}
         <HeaderBell />
         {/* Pestañas de navegación */}
         <div className="flex border-b mb-6 justify-between text-[20px] ">
           <button
-            className={`text-[18px]  ${
+            className={`text-[13px]  ${
               activeTab === "upcoming" ? "text-[#FFEE00]" : "text-[#EDEDED]"
             } relative text-left ${
               activeTab === "upcoming"
@@ -153,7 +153,7 @@ const OrdersPage = () => {
             Upcoming
           </button>
           <button
-            className={`text-[20px] ${
+            className={`text-[13px] ${
               activeTab === "completed" ? "text-[#FFEE00]" : "text-[#EDEDED]"
             } relative mx-auto ${
               activeTab === "completed"
@@ -165,7 +165,7 @@ const OrdersPage = () => {
             Completed
           </button>
           <button
-            className={`px-4 py-2 text-[20px] ${
+            className={`pr-4 py-2 text-[13px] ${
               activeTab === "past" ? "text-[#FFEE00]" : "text-[#EDEDED]"
             } relative text-right ${
               activeTab === "past"

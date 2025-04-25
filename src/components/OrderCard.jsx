@@ -20,13 +20,13 @@ const OrderCard = ({ order }) => {
 
   const btn = (
     <button
-      className="w-1/3 bg-[#FFEE00] hover:bg-[#A89E00] active:bg-[#FFD700] text-[#080B11] text-[15.3px] mb-0 flex items-center px-5 py-2 rounded-[20px] rounded-tr-none h-[51px] justify-around"
+      className="w-4/10 bg-[#FFEE00] hover:bg-[#A89E00] active:bg-[#FFD700] text-[#080B11] text-[10px] mb-0 flex items-center  py-2 rounded-[20px] rounded-tr-none h-[40px] justify-center gap-2"
       style={{
         boxShadow: "inset 3px -3px 7px #080C0F80",
       }}
     >
       Resume
-      <img src="/images/eye.png" alt="eye" className="h-4" />
+      <img src="/images/eye.png" alt="eye" className="h-3" />
     </button>
   );
 
@@ -91,16 +91,13 @@ const OrderCard = ({ order }) => {
               alt="Delivery Truck"
               className="h-5"
             />
-            <img
-              src="/images/deliveryLine.png"
-              alt="Delivery Line"
-              className="h-12"
-            />
+            <div className="vertical-line"></div>
+
             <img src="/images/gps.png" alt="GPS" className="h-5" />
           </div>
 
           {/* Columna central - Información de ubicación */}
-          <div className="col-span-7 space-y-3">
+          <div className="col-span-5 space-y-3">
             {/* Información de recogida */}
             <div className="flex flex-col mt-4">
               <h2 className="text-[#535455] text-[10.9px]">PICKUP</h2>
@@ -155,10 +152,10 @@ const OrderCard = ({ order }) => {
 
         {/* Botones en la parte inferior */}
         {order.status === "In transit" ? (
-          <div className="flex justify-between mt-6">
+          <div className="flex justify-between mt-6 ">
             <button
               onClick={handlePickupClick} // Manejador de clic añadido
-              className="w-[199px] bg-[#FFEE00] hover:bg-[#A89E00] active:bg-[#FFD700] text-[#080B11] px-4 py-2 rounded-[20px] text-[15.3px] rounded-tl-none"
+              className="w-5/10 bg-[#FFEE00] hover:bg-[#A89E00] active:bg-[#FFD700] text-[#080B11] px-4 py-2 rounded-[20px] text-[10px] rounded-tl-none text-end"
               style={{
                 boxShadow: "inset -3px -3px 7px #080C0F80",
               }}
